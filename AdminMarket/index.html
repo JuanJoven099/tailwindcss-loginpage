@@ -22,6 +22,12 @@
             }
         }
     </script>
+    <script>
+        // Asegurar la barra final en GitHub Pages para evitar errores 404 en rutas relativas
+        if (window.location.hostname.includes("github.io") && !window.location.pathname.endsWith("/") && !window.location.pathname.endsWith(".html")) {
+            window.location.replace(window.location.pathname + "/" + window.location.search + window.location.hash);
+        }
+    </script>
 </head>
 
 <body class="bg-[#f4f9fc] text-gray-800 font-sans antialiased">
