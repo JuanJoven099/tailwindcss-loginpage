@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AdminMarket | Administra tu negocio</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-[#f4f9fc] text-gray-800 font-sans antialiased">
+
+    <!-- Header / Navbar Principal -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 transition-all">
+
+        <div class="py-4 px-6 md:px-[8%] flex justify-between items-center">
+            <a href="#inicio" class="text-2xl font-black text-blue-600 tracking-tight">
+                Admin<span class="text-red-500">Market</span>
+            </a>
+
+            <!-- Navegación Escritorio -->
+            <nav class="hidden md:flex items-center gap-7">
+                <a href="#inicio" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Inicio</a>
+                <a href="#beneficios" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Beneficios</a>
+                <a href="#nosotros" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Nosotros</a>
+                <a href="#contacto" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Contacto</a>
+                <a href="./iniciodesesion/index.html" id="navLoginBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2.5 rounded-lg shadow-sm hover:shadow transition">
+                    Iniciar sesión
+                </a>
+            </nav>
+
+            <!-- Botón Hamburguesa Móvil -->
+            <button class="md:hidden text-2xl text-gray-700 hover:text-blue-600 p-2 focus:outline-none cursor-pointer select-none" id="menuBtn" aria-label="Abrir menú">
+                ☰
+            </button>
+        </div>
+
+        <!-- Menú Móvil Desplegable (Sticky junto al header para abrir en cualquier momento) -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-3 shadow-xl">
+            <a href="#inicio" class="block text-gray-700 hover:text-blue-600 font-medium py-2">Inicio</a>
+            <a href="#beneficios" class="block text-gray-700 hover:text-blue-600 font-medium py-2">Beneficios</a>
+            <a href="#nosotros" class="block text-gray-700 hover:text-blue-600 font-medium py-2">Nosotros</a>
+            <a href="#contacto" class="block text-gray-700 hover:text-blue-600 font-medium py-2">Contacto</a>
+            <a href="./iniciodesesion/index.html" id="mobileLoginBtn" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-lg shadow-sm transition">
+                Iniciar sesión
+            </a>
+        </div>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-[600px] py-16 lg:py-24 px-6 md:px-[8%] flex flex-col lg:flex-row items-center justify-between gap-12 bg-gradient-to-br from-[#f7fbff] to-[#e9f5ff]" id="inicio">
+
+        <div class="max-w-xl text-center lg:text-left">
+
+            <p class="text-blue-600 text-xs sm:text-sm font-bold tracking-[1.5px] uppercase mb-4">
+                GESTIÓN SENCILLA PARA TU NEGOCIO
+            </p>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-[52px] font-extrabold text-gray-900 leading-[1.1] mb-6">
+                Administra tu negocio <span class="text-blue-600">de forma fácil</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-gray-600 leading-relaxed mb-8">
+                AdminMarket es una aplicación web que te permite
+                controlar productos, inventario, ventas y ganancias
+                desde un solo lugar.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+
+                <a href="#beneficios" class="inline-block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    Conocer más
+                </a>
+
+                <a href="./registrar/index.html" class="inline-block text-center text-blue-600 bg-white hover:bg-blue-50 border-2 border-blue-600 font-bold py-3.5 px-6 rounded-xl transition">
+                    Comenzar ahora
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="w-full max-w-[480px] bg-white p-5 rounded-3xl shadow-2xl border border-blue-50">
+
+            <div class="bg-gradient-to-br from-blue-600 to-blue-500 p-6 rounded-2xl text-white shadow-inner">
+
+                <h2 class="text-2xl font-bold mb-1">AdminMarket</h2>
+
+                <p class="text-blue-100 text-sm mb-5">
+                    ¿Qué deseas hacer?
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                    <div class="bg-white text-gray-800 p-5 rounded-xl shadow-sm hover:shadow-md transition">
+                        <div class="text-3xl mb-2">📦</div>
+                        <h3 class="font-bold text-base text-gray-900 mb-1">Registrar producto</h3>
+                        <p class="text-gray-500 text-xs sm:text-sm leading-snug">Agrega productos, precios y cantidades.</p>
+                    </div>
+
+                    <div class="bg-white text-gray-800 p-5 rounded-xl shadow-sm hover:shadow-md transition">
+                        <div class="text-3xl mb-2">🛒</div>
+                        <h3 class="font-bold text-base text-gray-900 mb-1">Registrar ventas</h3>
+                        <p class="text-gray-500 text-xs sm:text-sm leading-snug">Registra y controla tus movimientos.</p>
+                    </div>
+
+                    <div class="bg-white text-gray-800 p-5 rounded-xl shadow-sm hover:shadow-md transition">
+                        <div class="text-3xl mb-2">📋</div>
+                        <h3 class="font-bold text-base text-gray-900 mb-1">Inventario</h3>
+                        <p class="text-gray-500 text-xs sm:text-sm leading-snug">Consulta tus productos y controla el stock.</p>
+                    </div>
+
+                    <div class="bg-white text-gray-800 p-5 rounded-xl shadow-sm hover:shadow-md transition">
+                        <div class="text-3xl mb-2">📊</div>
+                        <h3 class="font-bold text-base text-gray-900 mb-1">Ganancias</h3>
+                        <p class="text-gray-500 text-xs sm:text-sm leading-snug">Revisa el rendimiento de tu negocio.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Problem Section -->
+    <section class="bg-white text-center py-20 px-6 md:px-[8%]" id="nosotros">
+
+        <p class="text-blue-600 text-xs sm:text-sm font-bold tracking-[1.5px] uppercase mb-4">EL PROBLEMA</p>
+
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">
+            ¿Cansado de administrar tu negocio manualmente?
+        </h2>
+
+        <p class="max-w-[750px] mx-auto text-base sm:text-lg text-gray-600 leading-relaxed">
+            Llevar el control de tus productos, ventas e inventario
+            en cuadernos o diferentes archivos puede generar errores
+            y hacerte perder tiempo. AdminMarket reúne todo lo que
+            necesitas en un solo lugar.
+        </p>
+
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 px-6 md:px-[8%] text-center bg-[#f4f9fc]" id="beneficios">
+
+        <p class="text-blue-600 text-xs sm:text-sm font-bold tracking-[1.5px] uppercase mb-4">¿POR QUÉ ADMINMARKET?</p>
+
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-12">
+            Todo lo que necesitas para tu negocio
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto text-left sm:text-center">
+
+            <div class="bg-white p-7 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                <div class="text-4xl mb-4">📦</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-3">Inventario</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Consulta tus productos y controla
+                    fácilmente el stock disponible.
+                </p>
+            </div>
+
+            <div class="bg-white p-7 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                <div class="text-4xl mb-4">🛒</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-3">Ventas</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Registra tus ventas y mantén
+                    organizado el movimiento de tu negocio.
+                </p>
+            </div>
+
+            <div class="bg-white p-7 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                <div class="text-4xl mb-4">📊</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-3">Ganancias</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Conoce el rendimiento de tu negocio
+                    de manera rápida y sencilla.
+                </p>
+            </div>
+
+            <div class="bg-white p-7 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                <div class="text-4xl mb-4">⚡</div>
+                <h3 class="text-lg font-bold text-gray-900 mb-3">Fácil de usar</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Administra la información de tu negocio
+                    desde una plataforma sencilla.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="my-12 mx-6 md:mx-[8%] mb-20 py-16 px-6 sm:px-12 text-center rounded-3xl bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-xl">
+
+        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">
+            Lleva tu negocio al siguiente nivel
+        </h2>
+
+        <p class="text-base sm:text-lg text-blue-100 max-w-2xl mx-auto mb-8">
+            Empieza a administrar tus productos, ventas,
+            inventario y ganancias desde un solo lugar.
+        </p>
+
+        <a href="./registrar/index.html" class="inline-block bg-white text-blue-600 hover:bg-gray-100 font-bold py-3.5 px-8 rounded-xl shadow-md hover:shadow-lg transition transform hover:scale-105">
+            Comenzar ahora
+        </a>
+
+    </section>
+
+    <!-- Footer Completo y Profesional -->
+    <footer class="bg-gray-900 text-gray-400 pt-16 pb-8 border-t border-gray-800">
+
+        <div class="max-w-7xl mx-auto px-6 md:px-[8%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12 text-left">
+
+            <!-- Columna 1: Marca y Creadores -->
+            <div class="space-y-4">
+                <a href="#inicio" class="text-2xl font-black text-blue-500 tracking-tight inline-block">
+                    Admin<span class="text-red-500">Market</span>
+                </a>
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    Plataforma inteligente diseñada para facilitar el control de inventario, registro de ventas y seguimiento de ganancias en tu negocio.
+                </p>
+                <div class="pt-3 border-t border-gray-800">
+                    <p class="text-xs text-gray-500 font-medium">Creado y desarrollado por:</p>
+                    <p class="text-sm font-semibold text-gray-200 mt-0.5">Juanjoven099 y 1010jero</p>
+                    <p class="text-xs text-blue-400 font-medium mt-0.5">Proyecto Formativo &copy; 2026</p>
+                </div>
+            </div>
+
+            <!-- Columna 2: Enlaces Rápidos -->
+            <div>
+                <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-4">
+                    Navegación
+                </h3>
+                <ul class="space-y-2.5 text-sm">
+                    <li>
+                        <a href="#inicio" class="hover:text-blue-400 transition-colors">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#beneficios" class="hover:text-blue-400 transition-colors">Beneficios</a>
+                    </li>
+                    <li>
+                        <a href="#nosotros" class="hover:text-blue-400 transition-colors">¿Por qué nosotros?</a>
+                    </li>
+                    <li>
+                        <a href="#contacto" class="hover:text-blue-400 transition-colors">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="./iniciodesesion/index.html" class="hover:text-blue-400 transition-colors">Iniciar sesión</a>
+                    </li>
+                    <li>
+                        <a href="./registrar/index.html" class="hover:text-blue-400 transition-colors">Crear cuenta nueva</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Información de Contacto -->
+            <div id="contacto">
+                <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-4">
+                    Contacto
+                </h3>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-400 text-base">📍</span>
+                        <span>Colombia</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-400 text-base">✉️</span>
+                        <a href="mailto:soporte@adminmarket.com" class="hover:text-blue-400 transition-colors break-all">
+                            soporte@adminmarket.com
+                        </a>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-400 text-base">📞</span>
+                        <a href="tel:+573000000000" class="hover:text-blue-400 transition-colors">
+                            +57 (300) 000-0000
+                        </a>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-blue-400 text-base">⏰</span>
+                        <span>Lunes a Sábado<br><span class="text-xs text-gray-500">8:00 AM - 6:00 PM</span></span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Columna 4: Repositorio y Redes -->
+            <div>
+                <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-4">
+                    Código & Proyecto
+                </h3>
+                <p class="text-sm text-gray-400 mb-4">
+                    Código fuente oficial y actualizaciones del proyecto disponibles en GitHub.
+                </p>
+                <div class="flex flex-col gap-2.5">
+                    <a href="https://github.com/JuanJoven099/Landing-Page-Proyecto" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-200 text-sm font-medium border border-gray-700 transition">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                        </svg>
+                        <span>Ver en GitHub</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Barra inferior de Copyright -->
+        <div class="border-t border-gray-800/80 pt-6 px-6 md:px-[8%] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500 max-w-7xl mx-auto">
+            <p>&copy; 2026 AdminMarket - Gestión sencilla para tu negocio. Todos los derechos reservados.</p>
+            <div class="flex items-center gap-6">
+                <a href="#inicio" class="hover:text-gray-400 transition-colors">Términos</a>
+                <a href="#inicio" class="hover:text-gray-400 transition-colors">Privacidad</a>
+                <a href="#inicio" class="hover:text-gray-400 transition-colors">Seguridad</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="index.js"></script>
+
+</body>
+</html>

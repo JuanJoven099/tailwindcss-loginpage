@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - AdminMarket</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-[#eaf7ff] p-4 sm:p-6 font-sans text-gray-800 antialiased">
+
+    <main class="w-full flex justify-center items-center">
+
+        <div class="relative w-full max-w-[420px] bg-white p-8 sm:p-10 rounded-3xl shadow-xl border border-blue-50">
+
+            <!-- Botón de regreso -->
+            <a href="../index.html" class="absolute top-6 left-6 text-2xl text-blue-600 hover:text-blue-800 hover:-translate-x-1 transition-transform" title="Volver al inicio">
+                ←
+            </a>
+
+            <!-- Título y descripción -->
+            <div class="text-center mt-2 mb-6">
+                <h1 class="text-3xl font-extrabold text-gray-900">
+                    Iniciar <span class="text-blue-600">Sesión</span>
+                </h1>
+                <p class="text-gray-500 text-sm mt-1">Ingresa tus datos para continuar</p>
+            </div>
+
+            <!-- Formulario -->
+            <form id="formLogin" class="flex flex-col">
+
+                <label for="correo" class="text-sm font-bold text-gray-700 mb-1.5">
+                    Correo electrónico
+                </label>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="Ingresa tu correo"
+                    required
+                    class="w-full px-4 py-3 mb-4 text-sm border border-gray-300 rounded-xl outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition duration-150"
+                >
+
+                <label for="password" class="text-sm font-bold text-gray-700 mb-1.5">
+                    Contraseña
+                </label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Ingresa tu contraseña"
+                    required
+                    class="w-full px-4 py-3 mb-2 text-sm border border-gray-300 rounded-xl outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition duration-150"
+                >
+
+                <div class="text-right mb-6">
+                    <a href="#" class="text-xs sm:text-sm text-blue-600 hover:text-blue-800 hover:underline">
+                        ¿Olvidaste tu contraseña?
+                    </a>
+                </div>
+
+                <button type="submit" id="btnLogin" class="w-full py-3.5 px-4 bg-blue-600 hover:bg-blue-700 active:scale-[0.98] text-white font-bold rounded-xl shadow-md hover:shadow-lg transition duration-200 cursor-pointer">
+                    Iniciar sesión
+                </button>
+
+            </form>
+
+            <!-- Pie de tarjeta -->
+            <p class="text-center text-sm text-gray-500 mt-6">
+                ¿No tienes una cuenta?
+                <a href="../registrar/index.html" class="text-blue-600 font-bold hover:underline ml-1">
+                    Crear cuenta
+                </a>
+            </p>
+
+        </div>
+
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
